@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row max-height align-items-center text-center">
+            <div class="col">
+                <button class="btn btn-outline-secondary">Click Me!</button>
+            </div> 
+        </div>               
+    </div>
+    <script>
+        const body = document.querySelector('body'); // 태그를 호출한다.
+        const btn = document.querySelector('button');
+        const colors = ['lightgreen', 'lightblue', 'lightyellow']
+
+        body.style.backgroundColor = 'salmon';
+        btn.addEventListener('click', colorChange); // function 뒤에 ()가 없다.
+
+        function colorChange() {
+            const colorIdx = parseInt(Math.random()*colors.length); // 순서를 랜덤으로 만들기
+            body.style.backgroundColor = colors[colorIdx]; // 랜덤으로 배열 안의 컬러를 선택한다.
+}
+    </script>
+</body>
+</html>
